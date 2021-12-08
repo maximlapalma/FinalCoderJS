@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+
+
+
+h1 {
+  font-size: larger;
+  text-align: center;
+  font-weight: bolder;
+  padding: 2vw;
+}
+
+h2 {
+    text-align: center;
+    padding: 1vw;
+}
+
+form {
+  div {
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  label {
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+}
+
+fieldset {
+  border: solid 1px #d50032;
+  border-radius: 2px;
+  padding: 2vw;
+  background-color: white;
+  legend {
+    padding: 1vw;
+    border: solid 1px #d50032;
+    border-radius: 2px;
+    background-color: whitesmoke;
+    font-weight: bolder;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px;
+  }
+  p {
+      text-align: center;
+  }
+  input[type="button"] {
+    background-color: #d50032;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 1vw;
+    float: right;
+    margin-top: 7px;
+    cursor: pointer;
+    &:hover {
+        background-color: honeydew;
+        color: #D50032;
+        border: solid 1px #D50032;
+        transition: 0.5s;
+      }
+    .remover {
+      padding: 2vw;
+      font-weight: bolder;
+      font-size: x-large;
+      background-color: #ff0000;
+    }
+  }
+  .catedra-origen {
+    flex-direction: row;
+  }
+  #materia-optativa{
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.materiasPedidas {
+  justify-content: center;
+  p {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    input {
+        margin: 1vw;
+    }
+  }
+}
+
+
+.botonesAgregarMaterias {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: stretch;
+
+  input {
+      margin: 1vw;
+  }
+
+  #masMateria {
+    background-color: #3366ff;
+    color: white;
+    cursor: pointer;
+    &:hover {
+        
+        color: #3366ff;
+        background-color: white;
+        border: solid 1px #3366ff; 
+       }
+  }
+
+  #confirmarMaterias {
+    background-color: #339966;
+    cursor: pointer;
+    &:hover {
+        
+        color: #339966;
+        background-color: white;
+        border: solid 1px #339966;
+       }
+  }
+}
+
+.materiaSolicitud {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    border-style: dashed; 
+    border-width: 1px;
+    border-color: hotpink;
+}
+
+
+.datosEnviados{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 1vw;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 80%;
+            overflow-wrap: break-word;
+            
+        }
+    }
+    p {
+       text-align: left;
+       
+
+    }
+}
+
+.atencion {
+  
+        margin-bottom: 4px;
+
+}
+
+#enviar {
+    background-color: #3366ff;
+    color: white;
+    cursor: pointer;
+    border: none;
+    padding: 20px;
+    border-radius: 2px;
+    font-weight: bolder;
+    &:hover {
+        
+        color: #3366ff;
+        background-color: white;
+        border: solid 1px #3366ff;
+        transition: 0.5s;
+       }
+}

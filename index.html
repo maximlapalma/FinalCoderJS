@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <title>Formulario Inscripción</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Formulario inscripción</h1>
+      <form name="fomrIns" autocomplete="off" id="fomrIns">
+        <div class="datos-personales">
+          <div class="datos-estudiante">
+            <fieldset>
+              <legend>Datos del estudiante</legend>
+              <div class="nombre">
+                <label for="nombres">Nombres: </label>
+                <input
+                  estudianteKey = "Nombre"
+                  type="text"
+                  id="nombres"
+                  name="nombres"
+                  class="estudianteDatos"
+                />
+              </div>
+              <div class="apellido">
+                <label for="apellidos">Apellido/s:</label>
+                <input
+                  estudianteKey = "Apellido"
+                  type="text"
+                  id="apellidos"
+                  name="apellidos"
+                  class="estudianteDatos"
+                />
+              </div>
+              <div class="correo-electronico">
+                <label for="correo-electronico">Correo elctrónico:</label>
+                <input
+                  estudianteKey = "Correo Electrónico"
+                  type="email"
+                  id="correoElectronico"
+                  name="correo-electronico"
+                  class="estudianteDatos"
+                />
+              </div>
+              <input type="button" id="siguiente1" value="Siguiente">
+            </fieldset>
+          </div>
+
+          <div class="datos-facultad">
+            <fieldset>
+              <legend>Información general</legend>
+              <div class="anio-lectivo">
+                <label for="anio-lectivo">Año lectivo:</label>
+                <input type="text" id="anioLectivo" name="anio-lectivo" class="facultadDatos" facultadKey = "Año lectivo" />
+              </div>
+              <div class="clave-facultad">
+                <label for="clave-facultad">Clave Facultad:</label>
+                <input type="text" id="claveFacultad" name="clave-facultad" class="facultadDatos" facultadKey = "Clave facultad"/>
+              </div>
+
+              <div class="catedra-origen">
+                <div class="label-catedra-origen">
+                  <label for="catedra-origen">Cátedra de origen:</label>
+                </div>
+                <div class="opcion-a">
+                  <input 
+                  class="facultadDatos"
+                  facultadKey = "Cátedra de origen"
+                    type="radio"
+                    name="catedraOrigen"
+                    id="catedra-origen"
+                    value="a"
+                  />
+                  <label for="catedra-origen-a">A</label>
+                </div>
+                <div class="opcion-b">
+                  <input
+                  class="facultadDatos"
+                  facultadKey = "Cátedra de origen"
+                    type="radio"
+                    name="catedraOrigen"
+                    id="catedra-origen"
+                    value="b"
+                  />
+                  <label for="catedraOrigen-b">B</label>
+                </div>
+                <div class="opcion-c">
+                  <input
+                  class="facultadDatos"
+                  facultadKey = "Cátedra de origen"
+                    type="radio"
+                    name="catedraOrigen"
+                    id="catedra-origen"
+                    value="c"
+                  />
+                  <label for="catedra-origen-c">C</label>
+                </div>
+              </div>
+              <input type="button" id="siguiente2" value="Siguiente">
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="solicitud-materias">
+          <fieldset id="solicitud-materias">
+            <h2 class="atencion">¡Atención!</h2>
+            <p class="atencion">Es importante que selecciones y escribas correctamente los nombres</p>
+            <legend>Solicitud de materias</legend>
+            <div class="materiasPedidas" id="materiasPedidas"></div>  
+
+            <div class="materiaSolicitud" id="materiaSolicitud">
+              <label>Curso:</label>
+              <select id="cursoMateria" dataKey="Curso" class="solicitudMateria">
+                <option value="1°">1°</option>
+                <option value="2°">2°</option>
+                <option value="3°">3°</option>
+                <option value="4°">4°</option>
+                <option value="5°">5°</option>
+              </select>
+              <label>Cátedra:</label>
+              <select id="catedraMateria" dataKey="Cátedra" class="solicitudMateria">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+              </select>
+              <label>Nombre de la materia:</label>
+              <input id="nombreMateria" type="text" placeholder="Escribalo aquí" dataKey="Materia" class="solicitudMateria"/>
+            </div>
+            <div class="botonesAgregarMaterias">
+              <input type="button" id="masMateria" value="Agregar" />
+              <input type="button" id="confirmarMaterias" value="Confirmar">
+            </div>
+           <input type="button" id="siguiente3" value="Siguiente">
+          </fieldset>
+        </div>
+
+        <div class="fundamento-solicitud">
+          <fieldset>
+            <legend>Fundamentos de la solicitud</legend>
+            <div class="fundamento-textarea">
+              
+              <textarea id="fundamento-solicitud" name="textarea" rows="10" cols="50">Write something here</textarea>
+
+            </div>
+            <input type="button" id="siguiente4" value="Siguiente">
+          </fieldset>
+        </div>
+
+        <div class="materias-optativas">
+          <fieldset>
+            <legend>Inscripción a materias optativas</legend>
+
+            <div id="materia-optativa">
+              <input name="materia-optativa" id="curso-opcionales-2" type="radio" value="2°">
+              <label for="curso-opcionales-2">2° año</label>
+
+              <input name="materia-optativa" id="curso-opcionales-3" type="radio" value="3°">
+              <label for="curso-opcionales-3">3° año</label>
+
+              <input name="materia-optativa" id="curso-opcionales-4" type="radio" value="4°">
+              <label for="curso-opcionales-4">4° año</label>
+            </div>
+
+            <select id="mat-optativas" name="materias-optativas">
+              
+            <option value="0" selected="selected">Eligí un año para seleccionar la materia optativa...</option>
+             
+            </select>
+            <div>
+            <input type="button" id="siguiente5" value="Siguiente">
+            </div>
+          </fieldset>
+        </div>
+        <div class="boton-enviar">
+          <button type="submit" id="enviar">Enviar</button>
+        </div>
+
+      </form>
+      <div class="datosEnviados">
+        <div class="datos-estudiante-enviados">
+          <fieldset>
+            <legend>Datos del estudiante enviados:</legend>
+            <div class="datos-0"></div>
+          </fieldset>
+        </div>
+
+        <div class="datos-facultad-enviados">
+          <fieldset>
+            <legend>Datos de la facultad enviados:</legend>
+            <div class="datos-1"></div>
+          </fieldset>
+        </div>
+
+        <div class="solicitud-materias-enviados">
+          <fieldset>
+            <legend>Materias solicitadas:</legend>
+            <div class="datos-2"></div>
+          </fieldset>
+        </div>
+
+        <div class="fundamentos-enviados">
+          <fieldset>
+            <legend>Fundamentos de materias:</legend>
+            <div class="datos-3"></div>
+          </fieldset>
+        </div>
+
+        <div class="materias-optativas-enviadas">
+          <fieldset>
+            <legend>Materia optativa elegida:</legend>
+            <div class="datos-4"></div>
+          </fieldset>
+        </div>
+
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
